@@ -14,4 +14,6 @@ SELECT continent, name, area FROM world x WHERE area >= ALL (SELECT area FROM wo
 
 select continent, name from world x where name <= all( select name from world y where x.continent = y.continent);
 
+select name, continent, population from world x where 25000000 >= all( select population from world y where x.continent = y.continent );
 
+select name, continent from world x where x.population > all( select population * 3 from world y where x.continent = y.continent and x.name <> y.name );
