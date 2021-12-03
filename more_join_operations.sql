@@ -13,3 +13,9 @@ SELECT actor.name FROM movie JOIN casting ON movie.id=movieid JOIN actor ON acto
 SELECT actor.name FROM movie JOIN casting ON movie.id=movieid JOIN actor  ON actorid=actor.id WHERE title='Alien';
 
 SELECT title FROM movie JOIN casting ON movie.id=movieid JOIN actor ON actorid=actor.id WHERE actor.name ='Harrison Ford';
+
+SELECT title FROM movie JOIN casting ON movie.id=movieid JOIN actor ON actorid=actor.id WHERE actor.name ='Harrison Ford' and ord <> 1;
+
+SELECT title, name FROM movie JOIN casting ON movie.id=movieid JOIN actor ON actorid=actor.id WHERE yr =1962 and ord = 1;
+
+
